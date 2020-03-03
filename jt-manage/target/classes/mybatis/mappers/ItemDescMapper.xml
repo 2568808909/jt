@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jt.manage.mapper.ItemDescMapper">
+	<delete id="deleteByIds" parameterType="int">
+		delete from tb_item_desc where item_id in(
+			<foreach collection="ids" item="id" separator=",">
+				#{id}
+			</foreach>
+		)
+	</delete>
+	
+	<update id="updateById" parameterType="ItemDesc">
+		update tb_item_desc set item_desc=#{itemDesc},updated=#{updated} where item_id=#{itemId}
+	</update>
+</mapper>

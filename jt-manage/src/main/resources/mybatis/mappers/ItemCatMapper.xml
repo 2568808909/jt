@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jt.manage.mapper.ItemCatMapper">
+	<select id="getItemCatNameById" resultType="string">
+		select name from tb_item_cat where id=#{itemCatId}
+	</select>
+	
+	<select id="findItemCatByParentId" resultType="ItemCat">
+		select 
+			id,parent_id,name,status,sort_order,is_parent 
+		from 
+			tb_item_cat 
+		where 
+			parent_id=#{parendtId}
+	</select>
+</mapper>

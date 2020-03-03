@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jt-solr:war">
+    <output-path>$PROJECT_DIR$/jt-solr/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>jt-solr</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jt-solr.war">
+      <element id="artifact" artifact-name="jt-solr:war exploded" />
+    </root>
+  </artifact>
+</component>

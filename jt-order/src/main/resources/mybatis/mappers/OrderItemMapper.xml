@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jt.order.mapper.OrderItemMapper" >
+	
+	<insert id="saveOrderItems" parameterType="OrderItem">
+		insert into tb_order_item values
+			<foreach collection="orderItems" separator="," item="item">			
+				(#{item.itemId},#{item.orderId},#{item.num},#{item.title},#{item.price},#{item.totalFee},#{item.picPath},#{item.created},#{item.updated})
+			</foreach>
+	</insert>
+	
+	<select id="findOrderItemByOID" resultType="OrderItem">
+		select * from tb_order_item where order_id=#{order_id}
+	</select>
+</mapper>

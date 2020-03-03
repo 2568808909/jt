@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jt-order" />
+        <module name="jt-cart" />
+        <module name="jt-solr" />
+        <module name="jt-interface" />
+        <module name="jt-sso" />
+        <module name="jt-web" />
+        <module name="jt-manage" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jt-cart" target="1.8" />
+      <module name="jt-interface" target="1.8" />
+      <module name="jt-manage" target="1.8" />
+      <module name="jt-order" target="1.8" />
+      <module name="jt-parent" target="1.8" />
+      <module name="jt-solr" target="1.8" />
+      <module name="jt-sso" target="1.8" />
+      <module name="jt-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
